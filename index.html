@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MyWellness</title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+  <style>
+.social-buttons {
+    display: inline-block;
+    background: transparent;
+    padding: 20px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px 10px;
+    /* Helper class to divide the icons */
+  }
+  .social-buttons.social-margin {
+    margin-right: 15px;
+  }
+  .social-buttons a,
+  .social-buttons a:hover,
+  .social-buttons a:focus,
+  .social-buttons a:active {
+    text-decoration: none;
+  }
+  .social-buttons .social-icon {
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    -moz-border-radius: 138px;
+    -webkit-border-radius: 138px;
+    border-radius: 138px;
+    border: 5px solid;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    line-height: 1px;
+    padding-top: 11px;
+    transition: all 0.5s;
+    /* Facebook Button Styling */
+    /* Twitter Button Styling */
+    /* Google+ Button Styling */
+    /* Linkedin Button Styling */
+    /* Pinterest Button Styling */
+    /* Behance Button Styling */
+    /* Github Button Styling */
+    /* Youtube Button Styling */
+    /* Soundcloud Button Styling */
+  }
+  .social-buttons.social-icon:hover {
+    transform: rotate(360deg) scale(1.3);
+  }
+  
+  .social-buttons.social-icon.twitter:hover{
+    font-size: 22px;
+    padding-top: 10px;
+    padding-left: 2px;
+    border-color: #55acee;
+    background-color: #55acee;
+    color: #ffffff;
+  }
+  .social-buttons.social-icon.twitter:hover {
+    background-color: #ffffff;
+    color: #55acee;
+  }
+  
+  .social-buttons.social-icon.linkedin {
+    font-size: 24px;
+    padding-top: 8px;
+    padding-left: 1px;
+    background-color: #0976b4;
+    color: #ffffff;
+    border-color: #0976b4;
+  }
+  .social-buttons.social-icon.linkedin:hover {
+    background-color: #ffffff;
+    color: #0976b4;
+  }
+  .social-buttons.social-icon.instagram {
+    font-size: 22px;
+    padding-top: 9px;
+    background-color: #cb2027;
+    color: #ffffff;
+    border-color: #cb2027;
+  }
+  .social-buttons.social-icon.instagram:hover {
+    background-color: #ffffff;
+    color: #cb2027;
+  }
+  
+  .social-buttons.social-icon.github {
+    font-size: 22px;
+    padding-top: 9px;
+    background-color: #4183c4;
+    color: #ffffff;
+    border-color: #4183c4;
+  }
+  .social-buttons.social-icon.github:hover {
+    background-color: #ffffff;
+    color: #4183c4;
+  }
+ *{
+  margin: 0;
+  padding: 0;
+ }
+ </style>
+ </head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <!--banner-->
+  <section id="banner" class="banner">
+    <div class="background-color">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+              <div class="brand">
+              <img src="img/WhatsApp Image 2022-11-08 at 19.56.06.jpeg" class="img-responsive" style="width: 120px; margin-top: -16px;">
+            </div>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a target="_blank"  href="#banner">Home</a></li>
+                <li class=""><a target="_blank" href="#services">Services</a></li>
+                <li class=""><a target="_blank" href="#about">About</a></li>
+                <li class=""><a target="_blank" href="faq.html">FAQ</a></li>
+                <li class=""><a target="_blank" href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="row">
+          <div class="banner-info">
+            <div class="banner-logo text-center">
+              <img src="img/logo.png " class="img-responsive" style="width: 140px;">
+            </div>
+            <div class="banner-text text-center">
+              <h1 class="white">Healthcare at your desk!!</h1>
+              <p>This website is specially designed to help different peoples to classify their<br>respective disease and their concern doctors.</p>
+              <div class="link">
+              <button onclick="system()" title="check your health with system checker"><a target="_blank" href="https://symptoms.webmd.com/default.htm#/info">System Checker</a></button>
+              </div>
+              <br> 
+              <p>You Can Upload your Prescription here.</p>
+            </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- inputfile -->
+<div class="flex">
+  <!-- <form class="form-container" enctype='multipart/form-data'>
+    <div class="upload-files-container">
+      <div class="drag-file-area">
+        <span class="material-icons-outlined upload-icon"> file_upload </span>
+        <h3 class="dynamic-message"> Drag & drop any file here </h3>
+        <label class="label"> or <span class="browse-files"> <input type="file" class="default-file-input"/> <span class="browse-files-text">browse file</span> <span>from device</span> </span> </label>
+      </div>
+      <span class="cannot-upload-message"> <span class="material-icons-outlined">error</span> Please select a file first <span class="material-icons-outlined cancel-alert-button">cancel</span> </span>
+      <div class="file-block">
+        <div class="file-info"> <span class="material-icons-outlined file-icon">description</span> <span class="file-name"> </span> | <span class="file-size">  </span> </div>
+        <span class="material-icons remove-file-icon">delete</span>
+        <div class="progress-bar"> </div>
+      </div>
+      <button type="button" class="upload-button"> Upload </button>
+    </div>
+  </form> -->
+  
+  <div class="form">
+    <div class="grid">
+      <div class="form-element">
+        <input type="file" id="file-1" accept="image/*">
+        <label for="file-1" id="file-1-preview">
+          <img src="https://bit.ly/3ubuq5o" alt="">
+          <div>
+            <span>+</span>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  
+  .form {
+  /* margin:80px 0; */
+  /* padding:0px 50px; */
+  background-color: #be2222;
+}
+.form .grid {
+  /* margin-top:50px; */
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  padding: 2rem 0;
+}
+.form .grid .form-element {
+  width:200px;
+  height:200px;
+  box-shadow:0px 0px 20px 5px rgba(100,100,100,0.1);
+}
+.form .grid .form-element input {
+  display:none;
+}
+.form .grid .form-element img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.form .grid .form-element div {
+  position:relative;
+  height:40px;
+  margin-top:-40px;
+  background:rgba(0,0,0,0.5);
+  text-align:center;
+  line-height:40px;
+  font-size:13px;
+  color:#f5f5f5;
+  font-weight:600;
+}
+.form .grid .form-element div span {
+  font-size:40px;
+}
+</style>
+<script>
+  function previewBeforeUpload(id){
+  document.querySelector("#"+id).addEventListener("change",function(e){
+    if(e.target.files.length == 0){
+      return;
+    }
+    let file = e.target.files[0];
+    let url = URL.createObjectURL(file);
+    document.querySelector("#"+id+"-preview div").innerText = file.name;
+    document.querySelector("#"+id+"-preview img").src = url;
+  });
+}
+
+previewBeforeUpload("file-1");
+</script>
+
+  <style>
+
+.form-container {
+	background-color: #be2222;
+	display: flex;
+  justify-content: center;
+	align-items: center;
+  padding: 3rem 0;
+  }
+.upload-files-container {
+	background-color: #f7fff7;
+	width: 420px;
+	padding: 30px 60px;
+	border-radius: 40px;
+	display: flex;
+   	align-items: center;
+   	justify-content: center;
+	flex-direction: column;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 20px, rgba(0, 0, 0, 0.28) 0px 6px 6px;
+}
+.drag-file-area {
+	border: 2px dashed #be2222;
+	border-radius: 40px;
+	margin: 10px 0 15px;
+	padding: 30px 50px;
+	width: 350px;
+	text-align: center;
+}
+.drag-file-area .upload-icon {
+	font-size: 50px;
+}
+.drag-file-area h3 {
+	font-size: 26px;
+	margin: 15px 0;
+}
+.drag-file-area label {
+	font-size: 19px;
+}
+.drag-file-area label .browse-files-text {
+	color: #be2222;
+	font-weight: bolder;
+	cursor: pointer;
+}
+.browse-files span {
+	position: relative;
+	top: -25px;
+}
+.default-file-input {
+	opacity: 0;
+}
+.cannot-upload-message {
+	background-color: #ffc6c4;
+	font-size: 17px;
+	display: flex;
+	align-items: center;
+	margin: 5px 0;
+	padding: 5px 10px 5px 30px;
+	border-radius: 5px;
+	color: #BB0000;
+	display: none;
+}
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.cannot-upload-message span, .upload-button-icon {
+	padding-right: 10px;
+}
+.cannot-upload-message span:last-child {
+	padding-left: 20px;
+	cursor: pointer;
+}
+.file-block {
+	color: #f7fff7;
+	background-color: #be2222;
+  	transition: all 1s;
+	width: 390px;
+	position: relative;
+	display: none;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 10px 0 15px;
+	padding: 10px 20px;
+	border-radius: 25px;
+	cursor: pointer;
+}
+.file-info {
+	display: flex;
+	align-items: center;
+	font-size: 15px;
+}
+.file-icon {
+	margin-right: 10px;
+}
+.file-name, .file-size {
+	padding: 0 3px;
+}
+.remove-file-icon {
+	cursor: pointer;
+}
+.progress-bar {
+	display: flex;
+	position: absolute;
+	bottom: 0;
+	left: 4.5%;
+	width: 0;
+	height: 5px;
+	border-radius: 25px;
+	background-color: #4BB543;
+}
+.upload-button {
+	font-family: 'Montserrat';
+	background-color: #be2222;
+	color: #f7fff7;
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	border: none;
+	border-radius: 20px;
+	margin: 10px;
+	padding: 7.5px 50px;
+	cursor: pointer;
+}
+
+  </style>
+  <br>
+  <a class="center" href="C:\Users\LENOVO\Downloads\project\login.html"><strong><em>Log In</em></strong></a>
+  <hr class="her">
+  <a class="center1" href="C:\Users\LENOVO\Downloads\project\signup.html"><strong><em>Sign Up</em></strong></a>
+  <style>
+    .center{
+      color: #BB0000;
+      position: relative;
+      left: 720px;
+      font-size: 25px;
+    }
+    .center1
+    {
+      color: #BB0000;
+      position: relative;
+      left: 710px;
+      font-size: 25px;
+    }
+    .her{
+   border-style: none;
+   border-top-style: dotted;
+   border-color: black;
+   border-width: 5px;
+   width: 20%;
+   position: relative;
+   left: 600px;
+}
+    
+  </style>
+  <script>
+    var isAdvancedUpload = function() {
+  var div = document.createElement('div');
+  return (('draggable' in div) || ('ondragstart' in div && 'ondrop' in div)) && 'FormData' in window && 'FileReader' in window;
+}();
+
+let draggableFileArea = document.querySelector(".drag-file-area");
+let browseFileText = document.querySelector(".browse-files");
+let uploadIcon = document.querySelector(".upload-icon");
+let dragDropText = document.querySelector(".dynamic-message");
+let fileInput = document.querySelector(".default-file-input");
+let cannotUploadMessage = document.querySelector(".cannot-upload-message");
+let cancelAlertButton = document.querySelector(".cancel-alert-button");
+let uploadedFile = document.querySelector(".file-block");
+let fileName = document.querySelector(".file-name");
+let fileSize = document.querySelector(".file-size");
+let progressBar = document.querySelector(".progress-bar");
+let removeFileButton = document.querySelector(".remove-file-icon");
+let uploadButton = document.querySelector(".upload-button");
+let fileFlag = 0;
+
+fileInput.addEventListener("click", () => {
+	fileInput.value = '';
+	console.log(fileInput.value);
+});
+
+fileInput.addEventListener("change", e => {
+	console.log(" > " + fileInput.value)
+	uploadIcon.innerHTML = 'check_circle';
+	dragDropText.innerHTML = 'File Dropped Successfully!';
+	document.querySelector(".label").innerHTML = `drag & drop or <span class="browse-files"> <input type="file" class="default-file-input" style=""/> <span class="browse-files-text" style="top: 0;"> browse file</span></span>`;
+	uploadButton.innerHTML = `Upload`;
+	fileName.innerHTML = fileInput.files[0].name;
+	fileSize.innerHTML = (fileInput.files[0].size/1024).toFixed(1) + " KB";
+	uploadedFile.style.cssText = "display: flex;";
+	progressBar.style.width = 0;
+	fileFlag = 0;
+});
+
+uploadButton.addEventListener("click", () => {
+	let isFileUploaded = fileInput.value;
+	if(isFileUploaded != '') {
+		if (fileFlag == 0) {
+    		fileFlag = 1;
+    		var width = 0;
+    		var id = setInterval(frame, 50);
+    		function frame() {
+      			if (width >= 390) {
+        			clearInterval(id);
+					uploadButton.innerHTML = `<span class="material-icons-outlined upload-button-icon"> check_circle </span> Uploaded`;
+      			} else {
+        			width += 5;
+        			progressBar.style.width = width + "px";
+      			}
+    		}
+  		}
+	} else {
+		cannotUploadMessage.style.cssText = "display: flex; animation: fadeIn linear 1.5s;";
+	}
+});
+
+cancelAlertButton.addEventListener("click", () => {
+	cannotUploadMessage.style.cssText = "display: none;";
+});
+
+if(isAdvancedUpload) {
+	["drag", "dragstart", "dragend", "dragover", "dragenter", "dragleave", "drop"].forEach( evt => 
+		draggableFileArea.addEventListener(evt, e => {
+			e.preventDefault();
+			e.stopPropagation();
+		})
+	);
+
+	["dragover", "dragenter"].forEach( evt => {
+		draggableFileArea.addEventListener(evt, e => {
+			e.preventDefault();
+			e.stopPropagation();
+			uploadIcon.innerHTML = 'file_download';
+			dragDropText.innerHTML = 'Drop your file here!';
+		});
+	});
+
+	draggableFileArea.addEventListener("drop", e => {
+		uploadIcon.innerHTML = 'check_circle';
+		dragDropText.innerHTML = 'File Dropped Successfully!';
+		document.querySelector(".label").innerHTML = `drag & drop or <span class="browse-files"> <input type="file" class="default-file-input" style=""/> <span class="browse-files-text" style="top: -23px; left: -20px;"> browse file</span> </span>`;
+		uploadButton.innerHTML = `Upload`;
+		
+		let files = e.dataTransfer.files;
+		fileInput.files = files;
+		console.log(files[0].name + " " + files[0].size);
+		console.log(document.querySelector(".default-file-input").value);
+		fileName.innerHTML = files[0].name;
+		fileSize.innerHTML = (files[0].size/1024).toFixed(1) + " KB";
+		uploadedFile.style.cssText = "display: flex;";
+		progressBar.style.width = 0;
+		fileFlag = 0;
+	});
+}
+
+removeFileButton.addEventListener("click", () => {
+	uploadedFile.style.cssText = "display: none;";
+	fileInput.value = '';
+	uploadIcon.innerHTML = 'file_upload';
+	dragDropText.innerHTML = 'Drag & drop any file here';
+	document.querySelector(".label").innerHTML = `or <span class="browse-files"> <input type="file" class="default-file-input"/> <span class="browse-files-text">browse file</span> <span>from device</span> </span>`;
+	uploadButton.innerHTML = `Upload`;
+});
+  </script>
+  <!-- inputfile -->
+  <!--/ banner-->
+  <!--service-->
+  <section id="service" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-4">
+          <h2 class="ser-title">Our Service</h2>
+          <hr class="botm-line">
+          <p>Medical care is something everyone needs, it can be easy to forget that medical care is a service and patients are customers. But good customer service is just as important in medicine as it is in any other field, and because people's health is so important, bad medical care or shoddy customer service might cause clients to complain to local licensing boards or engage in other actions that can harm a medical business.</p>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="service-info">
+            <div class="icon">
+              <i class="fa fa-stethoscope"></i>
+            </div>
+            <div class="icon-info">
+              <h4>24 Hour Support</h4>
+              <p>If you have a health concern and can’t reach a doctor right away, or you’re not sure where else to call, you can call our Medical Help Line 24 hours a day, 7 days a week. Once enrolled, this member benefit allows you to speak with an experienced registered nurse to get answers to your questions and find out what steps you need to take. If you are currently a member of Independent Health, you can find the phone number of the 24-Hour Medical Help Line on the back of your Member ID card.<br /><br /> </p>
+            </div>
+          </div>
+          <div class="service-info">
+            <div class="icon">
+              <i class="fa fa-ambulance"></i>
+            </div>
+            <div class="icon-info">
+              <h4>Emergency Services</h4>
+              <p>Ambulance services in NSW are provided free of charge to concession card holders, including pensioners. NSW Ambulance also has a policy in place for patients who are under financial hardship and unable to pay for our services.24 hours patient transport vehicle available. Patients are transported from home (on campus) to IIT hospital and patients referred by emergency duty doctor to empanelled hospital for specialized care. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="service-info">
+            <div class="icon">
+              <i class="fa fa-user-md"></i>
+            </div>
+            <div class="icon-info">
+              <h4>Medical Counseling</h4>
+              <p>Process of providing information, advice, and assistance to patients to improve their health, treatment adherence, and quality of life
+              Focuses on open communication between the patient and the provider, shared  decision-making, and a shared goal of alleviating discomfort for the patient.
+              Takes into account patients’ individual preferences, concerns, and emotions
+              <br /><br /><br /><br />
+              </p>
+            </div>
+          </div>
+          <div class="service-info">
+            <div class="icon">
+              <i class="fa fa-medkit"></i>
+            </div>
+            <div class="icon-info">
+              <h4>OPD</h4>
+              <p>Patients are registered at the reception and are seen on first come, first serve basis, however out of turn consultation may be provided in case of emergency and senior citizen. Patients have the right to consult any doctor. In OPD, clinical consultation is provided to patients which includes history taking, clinical examination, diagnosis and providing prescription to patients besides advising laboratory tests in some cases.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ service-->
+  <!--cta-->
+  <section id="cta-1" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="schedule-tab">
+          <div class="col-md-4 col-sm-4 bor-left">
+            <div class="mt-boxy-color"></div>
+            <div class="medi-info">
+              <h3>Heart Specialist</h3>
+              <p>A professional Cardiologist will treat the patients heart diseases by understanding the symptoms and problems faced by the patient. Proper medicines and treatment will be provided to make the patients healthier.</p>
+              </div>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="medi-info">
+              <h3>Child Specialist</h3>
+              <p>A Pediatrician will provide proper medical care for the children. As in rural areas, children often suffer with diseases which if not treated may result in critical problems. The People can visit the Heathcenters for better treatment and medical care.</p>
+              </div>
+          </div>
+          <div class="col-md-4 col-sm-4 mt-boxy-3">
+            <div class="mt-boxy-color"></div>
+            <div class="time-info">
+              <h3>Opening Hours</h3>
+              <table style="margin: 8px 0px 0px;" border="1">
+                <tbody>
+                  <tr>
+                    <td>Monday - Friday</td>
+                    <td>8.00 - 17.00</td>
+                  </tr>
+                  <tr>
+                    <td>Saturday</td>
+                    <td>9.30 - 17.30</td>
+                  </tr>
+                  <tr>
+                    <td>Sunday</td>
+                    <td>9.30 - 15.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--cta-->
+  <!--about-->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <div class="section-title">
+            <h2 class="head-title lg-line">Our Mission</h2>
+            <hr class="botm-line">
+            <p class="sec-para">To promote awareness among functionaries involved in Health and Hospital Management. To promote research in the field of Health Care.In order to improve the efficiency of Health Care delivery Systems. To promote the development of high quality hospital services and community health care.</p>
+            <a target="_blank" href="" style="color: #8e1012; padding-top:10px;"></a>
+          </div>
+        </div>
+        <div class="col-md-9 col-sm-8 col-xs-12">
+          <div style="visibility: visible;" class="col-sm-9 more-features-box">
+            <div class="more-features-box-text">
+              <div class="more-features-box-text-icon"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
+              <div class="more-features-box-text-description">
+                <h3>Objective 1:</h3>
+                <p>Increase the range of services wherever there are opportunities to meet an area of customer need and demand, on financially viable basis.</p>
+              </div>
+            </div>
+            <div class="more-features-box-text">
+              <div class="more-features-box-text-icon"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
+              <div class="more-features-box-text-description">
+                <h3>Objective 2:</h3>
+                <p>Provide a safe and therapeutic environment for all patient, staff, visitors and to Increase overall satisfaction rates of patients, employees and visiting medical officers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ about-->
+  <!--cta 2-->
+  <section id="cta-2" class="section-padding">
+    <div class="container">
+      <div class=" row">
+        <div class="col-md-2"></div>
+        <div class="text-right-md col-md-4 col-sm-4">
+          <h2 class="section-title white lg-line">« A few words<br> about us »</h2>
+        </div>
+        <div class="col-md-4 col-sm-5">
+          I am  a young technocrat in field of Computer Science.My carrer objective is to touch the zenith of career by converting my innovative ideas into fruitful results and to work in cutting-edge competitive industry. 
+
+          <p class="text-right text-primary"><i>— Team MyWellness<br>B.tech CSE</i></p>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+  </section>
+   
+  <!--cta-->
+  <!--contact-->
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="ser-title">Contact us</h2>
+          <hr class="botm-line">
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <h3>Contact Info</h3>
+          <div class="space"></div>
+          <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>Jabalpur<br> India, 482002</p>
+          <div class="space"></div>
+          <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>mywellness@gmail.com</p>
+          <div class="space"></div>
+          <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+91 7509395093</p>
+        </div>
+        <div class="col-md-8 col-sm-8 marb20">
+          <div class="contact-info">
+            <h3 class="cnt-ttl">Having Any Query! Shoot us a message.</h3>
+            <div class="space"></div>
+            <div id="sendmessage">Your message has been sent. Thank you!</div>
+            <div id="errormessage"></div>
+            <form action="" method="post" role="form" class="contactForm">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control br-radius-zero" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control br-radius-zero" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control br-radius-zero" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control br-radius-zero" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validation"></div>
+              </div>
+
+              <!--<div class="form-action">
+                <button type="submit" class="btn btn-form">Send Message</button>-->
+                
+                <button><a href="C:\Users\LENOVO\Downloads\project\submit.html">Submit</a></button>
+                
+                <style>
+                button {
+    padding: 5px;
+    background-color:#E4DCCF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+  }
+  </style>
+                
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ contact-->
+  <!--footer-->
+  <footer id="footer">
+    <div class="top-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 marb20">
+            <div class="ftr-tle">
+            </div>
+            </div>
+          <div class="col-md-4 col-sm-4 marb20">
+            <div class="ftr-tle">
+              
+            </div>
+            <div class="info-sec">
+              
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 marb20">
+            <div class="ftr-tle">
+              <h4 class="white no-padding">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connect With us  </h4>
+            </div>
+            
+            <footer class="w3-container w3-padding-32 w3-indigo">
+              <div class="w3-row-padding">
+                <div class="w3-third">
+                  <div class="social-buttons">        
+                                          
+                            <!-- LinkedIn Button -->
+                            <a target="_blank" href="https://www.linkedin.com/company/ieeeditu" class="social-margin" target="blank">
+                              <div class="social-icon linkedin">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                              </div> 
+                            </a>
+                            <!-- instagram Button -->
+                            <a target="_blank" href="https://www.instagram.com/ieeeditu/?hl=en" target="blank"  class="social-margin">
+                              <div class="social-icon instagram">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                              </div>
+                            </a>
+                          <!-- Github Button -->
+                            <a target="_blank" href="https://github.com/ieeeditu"  target="blank"  class="social-margin">
+                              <div class="social-icon github">
+                                <i class="fa fa-github-alt" aria-hidden="true"></i>
+                              </div>
+                            </a>
+                            
+                            
+                    </div>
+                </div>
+                </p>
+                </div>
+              </div>
+            </footer>
+            
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-line">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            © All Copyright Reserved.
+            <div class="credits">
+              <!--
+                All the links in the footer should remain intact.
+                You can delete the links only if you purchased the pro version.
+                Licensing information: https://bootstrapmade.com/license/
+                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Medilab
+              -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--/ footer-->
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="contactform/contactform.js"></script>
+
+  
+
+</body>
+
+</html>
